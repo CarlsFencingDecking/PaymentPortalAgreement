@@ -74,6 +74,7 @@
     justify-content: center;
     align-items: center;
     margin: 20px 0 0 0;
+    padding-bottom: 30px;
 
 
 }
@@ -87,8 +88,9 @@
 }
 
 .statement {
-    width: 400px;
-    height: 70px;
+    text-align: center;
+    width: 300px;
+    height: 60px;
     background-color: #337ab7;
     color: #fff;;
     padding: 15px 30px 15px 30px;
@@ -127,7 +129,7 @@
 }
 #submit {
     text-decoration: none;
-    height: 55px;
+    height: 45px;
     opacity: .5;
 }
 
