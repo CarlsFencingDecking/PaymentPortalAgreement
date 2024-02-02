@@ -7,12 +7,15 @@ let steps = document.querySelectorAll('.steps')
 steps[0].style.fontWeight = 600;
 
 var url = window.location.href;
+//var url = 'https://carlsfencingdecking.github.io/PaymentPortalAgreement/?param1=$588.60%26param2=$122.17%26param3=$305.43%26param4=$91.63%26param5=$61.09%26param6=$30.54%26param7=https://533330.extforms.netsuite.com/app/site/hosting/scriptlet.nl?script=4050&deploy=1&compid=533330&h=e501275711f091b66330&mesaltid=19432-520760330240202-3a7c8ac9-9&meskey=U2FsdGVkX1%2BRzfspXBsSbmd4tl2j4oR3Ugpm3EaG8404aUyYIT2ySE6dALG34yCMl%2FwZA2jYC6OvcCC38zAMRQ%3D%3D';
 console.log(url)
 url = url.replace('https://carlsfencingdecking.github.io/PaymentPortalAgreement/?', '').replaceAll('%26', '').replaceAll('1=','').replaceAll('2=','').replaceAll('3=','').replaceAll('4=','').replaceAll('5=','').replaceAll('6=','').replaceAll('7=','');
 
 url = url.split('param')
 url.shift();
-console.log(url)
+
+let setPrices = [url[1],url[2],url[3],url[4],url[5],url[0],url[6]];
+console.log(setPrices)
 
 
 check.onclick = function(event){
@@ -48,7 +51,7 @@ let payPlans = document.querySelectorAll('.payPlans');
 let paySpans = document.querySelectorAll('.paySpans');
 
 payPlans.forEach(function(p,i){
-    p.innerText = url[i];
+    p.innerText = setPrices[i];
 
     if(url[i] === '$0.00' || url[i] === '' || url[i] === undefined || url[i] === null){
         paySpans[i].remove();
