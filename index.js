@@ -49,7 +49,7 @@ total.innerText = param1Value;
 //var url = "https://carlsfencingdecking.github.io/PaymentPortalAgreement/?param1=$247.50%26param2=$61.88%26param3=$37.13%26param4=$99.00%26param5=$37.13%26param6=$12.38";
 
 
-var url = new URLSearchParams(window.location.search);
+var url = window.location.href;
 console.log(url)
 url = url.replace('https://carlsfencingdecking.github.io/PaymentPortalAgreement/?', '').replaceAll('%26', '').replaceAll('1=','').replaceAll('2=','').replaceAll('3=','').replaceAll('4=','').replaceAll('5=','').replaceAll('6=','');
 
