@@ -35,8 +35,36 @@ decline.addEventListener('click', function(event){
 });
 
 
+/*
+
 const urlParams = new URLSearchParams(window.location.search);
 const param1Value = urlParams.get('param1');
 let total = document.getElementById('total');
 total.innerText = param1Value;
 
+*/
+
+
+// Sample URL
+//var url = "https://carlsfencingdecking.github.io/PaymentPortalAgreement/?param1=$247.50%26param2=$61.88%26param3=$37.13%26param4=$99.00%26param5=$37.13%26param6=$12.38";
+
+
+var url = new URLSearchParams(window.location.search);
+console.log(url)
+url = url.replace('https://carlsfencingdecking.github.io/PaymentPortalAgreement/?', '').replaceAll('%26', '').replaceAll('1=','').replaceAll('2=','').replaceAll('3=','').replaceAll('4=','').replaceAll('5=','').replaceAll('6=','');
+
+url = url.split('param')
+url.shift();
+console.log(url)
+
+let payPlans = document.querySelectorAll('.payPlans');
+let paySpans = document.querySelectorAll('.paySpans');
+
+payPlans.forEach(function(p,i){
+    p.innerText = url[i];
+
+    if(url[i] === '$0.00' || url[i] === '' || url[i] === undefined || url[i] === null){
+        paySpans[i].remove();
+    }
+    
+});
