@@ -36,9 +36,7 @@ decline.addEventListener('click', function(event){
 
 
 const urlParams = new URLSearchParams(window.location.search);
-
-// Get the value of 'param1'
 const param1Value = urlParams.get('param1');
+let total = document.getElementById('total');
+total.innerText = param1Value;
 
-// Log the value to the console or use it as needed
-console.log('param1 value:', param1Value);
