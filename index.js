@@ -33,3 +33,12 @@ submit.onclick = function(event){
 decline.addEventListener('click', function(event){
     window.close()
 });
+
+
+const urlParams = new URLSearchParams(window.location.search);
+
+// Get the value of 'param1'
+const param1Value = urlParams.get('param1');
+
+// Log the value to the console or use it as needed
+console.log('param1 value:', param1Value);
