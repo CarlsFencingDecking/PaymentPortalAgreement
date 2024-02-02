@@ -13,7 +13,6 @@ url = url.replace('https://carlsfencingdecking.github.io/PaymentPortalAgreement/
 url = url.split('param')
 url.shift();
 console.log(url)
-console.log(url[6])
 
 
 check.onclick = function(event){
@@ -22,7 +21,8 @@ check.onclick = function(event){
         steps[1].style.fontWeight = 600
         submit.style.opacity = '1'
         submit.classList.add('on')
-        submit.href = url[6];
+        submit.href = url[6]
+    }else {
         
         steps[0].style.fontWeight = 600
         steps[1].style.fontWeight = 100
