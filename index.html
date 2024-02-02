@@ -1,168 +1,102 @@
-#main {
-    display: flex;
-    flex-direction: column;
-    margin: 3% 5% 0 5%;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carl's Merchante Payment Terms & Agreements</title>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+<body>
+
+
+    <div id="main">
+
+        <div id="steps">
+            <span data-step="1" class="steps">Step 1 of 2: Agree To Merchante Terms and Condtions</span>
+            <span data-step="2" class="steps">Step 2 of 2: Proceed To Merchante Payment Portal</span>
+            <span id="totalSpan" class="steps paySpans">Grand Total : <span class="payPlans" id="total"></span></span>
+            <span class="steps paySpans">Deposit : <span class="payPlans" id="payOne"></span></span>
+            <span class="steps paySpans">Material Delivery / Other : <span class="payPlans" id="payTwo"></span></span>
+            <span class="steps paySpans">Completion : <span class="payPlans" id="payThree"></span></span>
+            <span class="steps paySpans">Other / TBD : <span class="payPlans" id="payFour"></span></span>
+            <span class="steps paySpans">Balance Upon Completion : <span class="payPlans" id="payFive"></span></span>
+        </div>
+
+        <div id="company">
+            <div id="title">
+                <h4>Pizzo Contracting T/A Carl's</h4>
+            </div>
+        </div>
+
+
+        <div id="TA">
+            <span id="consent">Electronic Consent For Merchante Payment Portal</span>
+
+            <div id="contract">
+
+                <p class="contract">
+                    In an attempt to expedite the contract process, Pizzo Contracting T/A Carl's provides the option for customers to agree to contracts
+                     electronically. If you choose to use this service, please carefully review the agreement below.
+                </p>
+                <p class="contract">Definitions:</p>
+                <p class="contract">
+                    "We," "us," "our" and "Carl's" means Pizzo Contracting T/A Carl's and each and every current and future affiliate of Pizzo Contracting
+                     T/A Carl's.
+                </p>
+                <p class="contract">
+                    "You" and "your" means the person giving this consent, and also each additional authorized signer, authorized representative, or delegate authorized to act on your behalf.
+                </p>
+                <p class="contract">
+                    The words "include" and "including," when used at the beginning of a list of one or more items, indicates that the list contains examples - the list is not exclusive or exhaustive, and the
+                    items in the list are only illustrations. They are not the only possible items that could appear in the list.
+                </p>
+                <p class="contract">
+                    By checking the box labeled "I agree," you are confirming your agreement to this agreement. You acknowledge that by checking this box, you are providing your consent electronically. By checking "I agree," you consent to the terms and conditions outlined in this agreement. You further agree that your confirmation using any device, means, or action, indicates your acceptance of the terms and conditions of this agreement. You also agree that your confirmation (hereafter referred to as your "Confirmation") is valid. You further agree that no certification authority or other third party verification is necessary to validate your Confirmation and that the lack of such certification or third party verification will not in any way affect the enforceability of your Confirmation or any resulting contract between you and Carl's. You further agree that each use of your Confirmation constitutes your agreement to be bound by the terms and conditions of these Disclosures and Agreements as they exist on the date of your Confirmation.
+                </p>
+                <p class="contract">
+                    Consent to Electronic Delivery. By checking the box labeled "I agree," you specifically agree to receive, obtain, and/or submit any and all Carl's documents and information electronically. These documents and information will be collectively known as "Electronic Communications," and will include to any and all current and future required notices and/or disclosures concerning various federal and/or state laws or regulations require that we provide to you, as well as such other documents, statements, data, records and any other communications regarding your relationship with Carl's. You acknowledge that, for your records, you are able to use Pizzo's Contracting Licensed CRM to retain Electronic Communications by printing and/or downloading and saving this agreement and any other agreements and Electronic Communications, documents, or records that you agree to using your Confirmation. You accept Electronic Communications provided via Pizzo's Contracting Licensed CRM as reasonable and proper notice, for the purpose of any and all laws, rules, and regulations, and agree that such electronic form fully satisfies any requirement that such communications be provided to you in writing or in a form that you may keep.
+                </p>
+
+                <p class="contract">
+                    Paper version of Electronic Communications. You may request a paper version of an Electronic Communication. You acknowledge that Carl's reserves the right to charge you a reasonable fee for the production and mailing of paper versions of Electronic Communications. To request a paper copy of an Electronic Communication contact us at (732) 505-1749.
+                </p>
+                <p class="contract">
+                    Revocation of electronic delivery. You have the right to withdraw your consent to receive/obtain communications via Pizzo's Contracting Licensed CRM at any time. You acknowledge that Carl's reserves the right to restrict or terminate your access to Pizzo's Contracting Licensed CRM if you withdraw your consent to receive Electronic Communications. If you wish to withdraw your consent, contact us at (732) 505-1749.
+                </p>
+                <p class="contract">
+                    Valid and current email address, notification and updates. Your current valid email address is required in order for you to obtain communications from Carl's. You agree to keep Carl's informed of any changes in your email address. You may modify your email address by submitting a written request to Carl's or visiting a business location. Carl's may notify you through email when an Electronic Communication or updated agreement pertaining to Pizzo's Contracting Licensed CRM is available. Carl's may also use Pizzo's Contracting Licensed CRM for Electronic Communications. It is your responsibility to use Pizzo's Contracting Licensed CRM regularly to check for Electronic Communications and to check for updates to this agreement. You will be deemed to have received an Electronic Communication from Carl's when the communication is sent to you.
+                </p>
+                <p class="contract">
+                    Hardware, software and operating system. You are responsible for installation, maintenance, and operation of your computer, browser and software. Carl's is not responsible for errors or failures from any malfunction of your computer, browser or software. Carl's is also not responsible for computer viruses or related problems associated with use of an online system.
+                </p>
+                <p class="contract">    
+                Controlling Agreement. This agreement supplements and modifies other agreements that you may have with Carl's. To the extent that this agreement and another agreement contain conflicting provisions, the provisions in this agreement will control (with the exception of provisions in another agreement for an electronic service which provisions specify the necessary hardware, software and operating system, in which such other provision controls). All other obligations of the parties remain subject to the terms and conditions of any other agreement.
+                </p>
+                <p class="contract">
+                    To obtain electronic services and communications, indicate your consent to the terms and conditions of this agreement by checking the box labeled "I agree."
+                </p>
+                                    
+
+            </div>
+
+        </div>
+
+
+        <div id="decision">
+
+            <div id="eContract">
+                <span id="agree">I agree</span>
+                <input type="checkbox" id="check">
+            </div>
+
+            <div id="statement">
+                <a disabled href="#" class="statement" type="submit" id="submit">I Accept. Proceed To Merchante Payment Portal.</a>
+                <button class="statement" type="submit" id="decline">I Decline. Please Close This Page.</button>
+            </div>
+
+        </div>
+
+    </div>
     
-}
-
-#steps {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    border: 1px solid rgb(1, 102, 1);
-    border-radius: 5px;
-    background-color: linear-gradient(to bottom,#dff0d8 0,#c8e5bc 100%);
-    
-        background-image: -webkit-linear-gradient(top,#dff0d8 0,#c8e5bc 100%);
-        background-image: -o-linear-gradient(top,#dff0d8 0,#c8e5bc 100%);
-        background-image: -webkit-gradient(linear,left top,left bottom,from(#dff0d8),to(#c8e5bc));
-        background-image: linear-gradient(to bottom,#dff0d8 0,#c8e5bc 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdff0d8', endColorstr='#ffc8e5bc', GradientType=0);
-        background-repeat: repeat-x;
-        border-color: #b2dba1;
-    
-    color: rgb(1, 102, 1);
-    padding: 10px;
-    
-}
-.steps {
-    margin: 5px;
-    letter-spacing: 1px;
-    font-weight: 100;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#company {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    
-}
-
-#consent {
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 200;
-    font-size: .73em;
-}
-
-#contract {
-    border: 2px solid #000;
-    height: 400px;
-    flex-direction: column;
-    overflow: hidden;
-    overflow-y: auto;
-
-}
-
-.contract {
-    padding: 10px;
-    overflow-y: auto;
-    margin: 10px;
-    text-align: center;
-    margin: 0 20px 0 20px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#decision {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0 0 0;
-    padding-bottom: 30px;
-
-
-}
-
-#statement {
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.statement {
-    text-align: center;
-    width: 300px;
-    height: 60px;
-    background-color: #337ab7;
-    color: #fff;;
-    padding: 15px 30px 15px 30px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: 1em;
-    letter-spacing: 1px;
-    border: 1px solid #0d477a;
-    border-radius: 3px;
-    margin: 5px;
-    
-}
-.on:hover {
-    background-color: #0d477a;
-    transition-duration: 20ms;
-    
-}
-
-#decline {
-    background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-    background-repeat: repeat-x;
-    border-color: #dbdbdb;
-    border-color: #ccc;
-    color: #000;
-
-}
-#decline:hover {
-    background-color: rgb(223, 223, 223);
-    transition-duration: 20ms;
-}
-#submit {
-    text-decoration: none;
-    height: 45px;
-    opacity: .5;
-}
-
-#eContract {
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
-    margin: 2%;
-}
-
-#agree {
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 1.2em;
-    margin-right: 10px;
-
-}
-#check {
-    cursor: pointer;
-}
-
-
-#totalSpan {
-    border-top: 1px dashed #000;
-    padding-top: 10px;
-}
-
-#total {
-    font-weight: 700;
-}
-.payPlans {
-    font-weight: 700;
-}
-
-
+</body>
+</html>
