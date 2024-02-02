@@ -151,3 +151,14 @@
 #check {
     cursor: pointer;
 }
+
+
+#totalSpan {
+    border-top: 1px dashed #000;
+    padding-top: 10px;
+}
+
+#total {
+    font-weight: 700;
+}
+
