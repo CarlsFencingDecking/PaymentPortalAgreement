@@ -85,3 +85,42 @@ payPlans.forEach(function(p,i){
 
    
 });
+
+
+// Replace these values with your own Box API credentials and file ID
+const BOX_ACCESS_TOKEN = 'zqjEeOSB35PoGF0gkySVVqxJ4Am1MNMZ';
+const FILE_ID = '1443475163741';
+
+// API endpoint for file content
+const BOX_API_URL = `https://api.box.com/2.0/files/${FILE_ID}/content`;
+
+// Fetch options including authorization header
+const fetchOptions = {
+  method: 'GET',
+  headers: {
+    'Authorization': `Bearer ${BOX_ACCESS_TOKEN}`,
+  }
+};
+
+// Fetch the PDF file content from Box
+fetch(BOX_API_URL, fetchOptions)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Failed to fetch PDF file from Box');
+    }
+    return response.blob();
+  })
+  .then(pdfBlob => {
+    // Convert blob to a URL
+    const pdfUrl = URL.createObjectURL(pdfBlob);
+    
+    // Now you can use the PDF URL to display or manipulate the PDF
+    console.log('PDF URL:', pdfUrl);
+    document.getElementById('pdfViewer').src = pdfUrl
+    
+    // For example, you could set an iframe src attribute to display the PDF
+    // document.getElementById('pdfViewer').src = pdfUrl;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
