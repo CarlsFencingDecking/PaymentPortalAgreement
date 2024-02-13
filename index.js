@@ -88,7 +88,7 @@ payPlans.forEach(function(p,i){
 
 
 // Replace these values with your own Box API credentials and file ID
-const BOX_ACCESS_TOKEN = 'zqjEeOSB35PoGF0gkySVVqxJ4Am1MNMZ';
+const BOX_ACCESS_TOKEN = '6mUVX25egVKBPFlVEIodHQf7ITh2nfSm';
 const FILE_ID = '1443475163741';
 
 // API endpoint for file content
