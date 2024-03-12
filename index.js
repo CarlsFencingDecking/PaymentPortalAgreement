@@ -35,15 +35,7 @@ check.onclick = function(event){
     }
 };
 
-submit.onclick = function(event){
-    if(!check.checked){
-        alert('To Proceed Please Agree To The Terms and Conditions.')
-    }
-}
 
-decline.addEventListener('click', function(event){
-    window.close()
-});
 
 
 
@@ -59,13 +51,9 @@ payPlans.forEach(function(p,i){
         paySpans[i].remove();
     }
 
-    
 
-    p.onclick = function(){
-
+    function cutPaste(){
         n++;
-        
-        
         p.select();
         navigator.clipboard.writeText(p.value);
         steps[2].style.fontWeight = 600;
@@ -77,50 +65,32 @@ payPlans.forEach(function(p,i){
         }else if(n > 1){
             steps[2].innerText = steps[2].innerText.replaceAll(pVal[1], pVal[0])
         }
-        
-
-
-
+      
     }
+    
+
+    p.onclick = function(){
+      cutPaste()
+    }
+
+    p.addEventListener('touchstart', function(){
+      cutPaste()
+    });
 
    
 });
 
 
-// Replace these values with your own Box API credentials and file ID
-const BOX_ACCESS_TOKEN = 'NS55cSvatiW4Ep6BN4fQSs4WhL4zcmqY';
-const FILE_ID = '1443475163741';
 
-// API endpoint for file content
-const BOX_API_URL = `https://api.box.com/2.0/files/${FILE_ID}/content`;
 
-// Fetch options including authorization header
-const fetchOptions = {
-  method: 'GET',
-  headers: {
-    'Authorization': `Bearer ${BOX_ACCESS_TOKEN}`,
+submit.onclick = function(event){
+  if(!check.checked){
+      alert('To Proceed Please Agree To The Terms and Conditions.')
   }
-};
+}
 
-// Fetch the PDF file content from Box
-fetch(BOX_API_URL, fetchOptions)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Failed to fetch PDF file from Box');
-    }
-    return response.blob();
-  })
-  .then(pdfBlob => {
-    // Convert blob to a URL
-    const pdfUrl = URL.createObjectURL(pdfBlob);
-    
-    // Now you can use the PDF URL to display or manipulate the PDF
-    console.log('PDF URL:', pdfUrl);
-    document.getElementById('pdfViewer').src = pdfUrl
-    
-    // For example, you could set an iframe src attribute to display the PDF
-    // document.getElementById('pdfViewer').src = pdfUrl;
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+decline.addEventListener('click', function(event){
+  window.close()
+});
+
+
