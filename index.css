@@ -52,7 +52,7 @@
 
 #contract {
     border: 2px solid #000;
-    height: 400px;
+    height: 800px;
     flex-direction: column;
     overflow: hidden;
     overflow-y: auto;
@@ -65,6 +65,7 @@
     margin: 10px;
     text-align: center;
     margin: 0 20px 0 20px;
+    font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
 }
 
