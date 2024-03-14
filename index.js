@@ -25,6 +25,7 @@ check.onclick = function(event){
         submit.style.opacity = '1'
         submit.classList.add('on')
         submit.href = url[6]
+        localStorage.setItem('agree', true)
     }else {
         
         steps[0].style.fontWeight = 600
@@ -32,6 +33,7 @@ check.onclick = function(event){
         submit.href = '#';
         submit.style.opacity = '.5'
         submit.classList.remove('on')
+        localStorage.setItem('agree', false)
     }
 };
 
